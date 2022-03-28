@@ -3,12 +3,11 @@ from django.shortcuts import render
 # Create your views here.
 
 def index(request):
-    return render(request,"blog/index.html",{
-        "hi":"hello django"
-    })
+    return render(request,"blog/index.html")
 
-def posts(requests):
-    pass
+def posts(request):
+    return render(request,"blog/all-posts.html")
 
-def detail(requests):
-    pass
+def detail(request, slug):
+    return render(request,"blog/post-detail.html")
+    
